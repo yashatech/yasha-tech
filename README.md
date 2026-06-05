@@ -8,7 +8,7 @@ Premium static landing page for [Yasha Technology](https://www.yasha.tech). Buil
 - Light/dark theme with system preference default and `localStorage` memory
 - Fully responsive (mobile-first)
 - Hero section with background image and glass UI
-- Portfolio case studies: Vaniday, uParcel, Pickupp, Cila Fit
+- Portfolio case studies: Vaniday, uParcel, Pickupp, EpicCasino, Cila Fit
 - Live / In development status badges on portfolio items
 - Scroll reveal animations and sticky header with scroll spy
 - Contact section with email + Telegram icon buttons and floating Telegram FAB
@@ -40,6 +40,9 @@ yasha-tech/
             ├── vaniday.jpg
             ├── uparcel.jpg
             ├── pickupp.jpg
+            ├── epiccasino_1.png
+            ├── epiccasino_2.png
+            ├── epiccasino_3.png
             ├── cilafit_1.jpg
             ├── cilafit_2.jpg
             └── cilafit_3.jpg
