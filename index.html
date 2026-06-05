@@ -1,4 +1,388 @@
-Hello world!
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yasha Technology — партнёр по разработке программного обеспечения и цифровых продуктов для стартапов и растущих компаний.">
+  <meta name="theme-color" content="#05070f" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#f4f7ff" media="(prefers-color-scheme: light)">
 
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Yasha Technology — Software & Digital Product Development">
+  <meta property="og:description" content="Проектируем, разрабатываем и масштабируем надёжные цифровые продукты. Full-stack, mobile, cloud, AI и enterprise-решения.">
+  <meta property="og:url" content="https://www.yasha.tech/">
+  <meta property="og:image" content="https://www.yasha.tech/assets/dark_logo.png">
 
-How are you?
+  <title>Yasha Technology — Разработка ПО и цифровых продуктов</title>
+
+  <!-- Favicon: replace with a dedicated favicon.ico if needed -->
+  <link rel="icon" type="image/png" href="assets/dark_logo.png">
+
+  <script>
+    (function () {
+      var theme = localStorage.getItem("yasha-theme");
+      if (theme !== "light" && theme !== "dark") {
+        theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-grid"></div>
+    <div class="ambient-glow ambient-glow--1"></div>
+    <div class="ambient-glow ambient-glow--2"></div>
+  </div>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo-wrap" href="#top" aria-label="Yasha Technology">
+        <img src="assets/white_logo.png" alt="Yasha Technology" class="logo logo--light" width="168" height="44">
+        <img src="assets/dark_logo.png" alt="Yasha Technology" class="logo logo--dark" width="168" height="44">
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#highlights" data-nav="highlights" data-i18n="nav.highlights">Компетенции</a>
+        <a href="#services" data-nav="services" data-i18n="nav.services">Услуги</a>
+        <a href="#portfolio" data-nav="portfolio" data-i18n="nav.portfolio">Портфолио</a>
+        <a href="#process" data-nav="process" data-i18n="nav.process">Процесс</a>
+        <a href="#stack" data-nav="stack" data-i18n="nav.stack">Стек</a>
+        <a href="#why" data-nav="why" data-i18n="nav.why">Почему мы</a>
+        <a href="#contact" data-nav="contact" data-i18n="nav.contact">Контакты</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="#contact" class="btn btn--primary btn--header hide-mobile" data-i18n="nav.cta">Обсудить проект</a>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-switch__btn is-active" data-lang="ru">RU</button>
+          <button type="button" class="lang-switch__btn" data-lang="en">EN</button>
+        </div>
+        <button type="button" class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-theme icon-theme--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+          <svg class="icon-theme icon-theme--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero section" id="hero">
+      <div class="hero__backdrop" aria-hidden="true">
+        <picture class="hero__photo">
+          <img src="assets/images/hero-bg.jpg" alt="" width="1920" height="1280" decoding="async" fetchpriority="high">
+        </picture>
+        <div class="hero__overlay"></div>
+        <div class="hero__fade"></div>
+        <div class="hero__orb hero__orb--1"></div>
+        <div class="hero__orb hero__orb--2"></div>
+        <div class="hero__mesh"></div>
+      </div>
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="eyebrow eyebrow--pill" data-i18n="hero.eyebrow">Партнёр по разработке ПО</p>
+          <h1 class="hero__title" data-i18n="hero.title">Проектируем, разрабатываем и масштабируем надёжные цифровые продукты</h1>
+          <p class="lead" data-i18n="hero.subtitle">Yasha Technology помогает стартапам и растущим компаниям создавать современные программные продукты — от MVP до production, мониторинга и долгосрочной поддержки.</p>
+          <div class="hero__actions">
+            <a href="#contact" class="btn btn--primary" data-i18n="hero.ctaPrimary">Обсудить проект</a>
+            <a href="#portfolio" class="btn btn--ghost" data-i18n="hero.ctaSecondary">Смотреть портфолио</a>
+          </div>
+          <div class="hero__chips">
+            <span data-i18n="hero.chip1">Full-stack</span>
+            <span data-i18n="hero.chip2">Mobile</span>
+            <span data-i18n="hero.chip3">Cloud & DevOps</span>
+            <span data-i18n="hero.chip4">AI & Automation</span>
+          </div>
+        </div>
+        <div class="hero__panel reveal reveal--delay">
+          <div class="glass-card glass-card--shine hero__card">
+            <p class="hero__card-label" data-i18n="hero.cardLabel">СТРОИТЬ · ЗАПУСКАТЬ · МАСШТАБИРОВАТЬ</p>
+            <ul class="hero__card-list">
+              <li data-i18n="hero.card1">Полный цикл разработки</li>
+              <li data-i18n="hero.card2">Прозрачный процесс и отчётность</li>
+              <li data-i18n="hero.card3">Production-ready архитектура</li>
+              <li data-i18n="hero.card4">Быстрый старт команды</li>
+            </ul>
+            <div class="hero__metrics">
+              <div><strong>6+</strong><span data-i18n="hero.metric1">направлений</span></div>
+              <div><strong>30+</strong><span data-i18n="hero.metric2">технологий</span></div>
+              <div><strong>24/7</strong><span data-i18n="hero.metric3">поддержка</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust / Highlights -->
+    <section class="section section--alt" id="highlights">
+      <div class="container">
+        <header class="section-header reveal">
+          <p class="eyebrow" data-i18n="highlights.eyebrow">Ключевые компетенции</p>
+          <h2 data-i18n="highlights.title">Инженерная экспертиза для цифровых продуктов и enterprise-систем</h2>
+          <p class="section-desc" data-i18n="highlights.desc">Один партнёр закрывает продукт, backend, cloud, AI и безопасность — с фокусом на бизнес-результат и долгосрочную эксплуатацию.</p>
+        </header>
+        <div class="highlights-grid">
+          <article class="glass-card highlight-card reveal"><span class="highlight-card__icon">01</span><h3 data-i18n="highlights.h1.title">Full-stack разработка</h3><p data-i18n="highlights.h1.desc">Web, SaaS, backend и системные интеграции в единой продуктовой архитектуре.</p></article>
+          <article class="glass-card highlight-card reveal"><span class="highlight-card__icon">02</span><h3 data-i18n="highlights.h2.title">Mobile development</h3><p data-i18n="highlights.h2.desc">iOS, Android и кросс-платформенные приложения для клиентов и операционных команд.</p></article>
+          <article class="glass-card highlight-card reveal"><span class="highlight-card__icon">03</span><h3 data-i18n="highlights.h3.title">Cloud & DevOps</h3><p data-i18n="highlights.h3.desc">Облачная архитектура, CI/CD, мониторинг и масштабирование под рост нагрузки.</p></article>
+          <article class="glass-card highlight-card reveal"><span class="highlight-card__icon">04</span><h3 data-i18n="highlights.h4.title">AI-решения</h3><p data-i18n="highlights.h4.desc">LLM, OCR, прогнозирование, рекомендации и автоматизация бизнес-процессов.</p></article>
+          <article class="glass-card highlight-card reveal"><span class="highlight-card__icon">05</span><h3 data-i18n="highlights.h5.title">Автоматизация</h3><p data-i18n="highlights.h5.desc">Интеграции с CRM, ERP, back-office и операционными инструментами.</p></article>
+          <article class="glass-card highlight-card reveal"><span class="highlight-card__icon">06</span><h3 data-i18n="highlights.h6.title">Enterprise-системы</h3><p data-i18n="highlights.h6.desc">Модернизация 1С / ERP, API-слои и операционные порталы.</p></article>
+          <article class="glass-card highlight-card reveal"><span class="highlight-card__icon">07</span><h3 data-i18n="highlights.h7.title">Кибербезопасность</h3><p data-i18n="highlights.h7.desc">Security-first архитектура, аудит и защита данных на всех этапах.</p></article>
+          <article class="glass-card highlight-card reveal"><span class="highlight-card__icon">08</span><h3 data-i18n="highlights.h8.title">Долгосрочное партнёрство</h3><p data-i18n="highlights.h8.desc">Выделенная команда, поддержка после запуска и развитие продукта.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section-header section-header--center reveal">
+          <p class="eyebrow" data-i18n="services.eyebrow">Услуги</p>
+          <h2 data-i18n="services.title">Комплексные решения для цифрового бизнеса</h2>
+        </header>
+        <div class="services-grid">
+          <article class="glass-card service-card reveal"><span class="service-card__num">01</span><h3 data-i18n="services.s1.title">Web-разработка</h3><p data-i18n="services.s1.desc">Веб-приложения, SaaS и подписочные платформы с масштабируемой архитектурой.</p></article>
+          <article class="glass-card service-card reveal"><span class="service-card__num">02</span><h3 data-i18n="services.s2.title">Mobile app development</h3><p data-i18n="services.s2.desc">Мобильные приложения для iOS и Android, клиентские и операционные сценарии.</p></article>
+          <article class="glass-card service-card reveal"><span class="service-card__num">03</span><h3 data-i18n="services.s3.title">Backend development</h3><p data-i18n="services.s3.desc">API, базы данных, бизнес-логика и системные интеграции.</p></article>
+          <article class="glass-card service-card reveal"><span class="service-card__num">04</span><h3 data-i18n="services.s4.title">UI/UX design</h3><p data-i18n="services.s4.desc">Пользовательские сценарии, структура продукта и понятные интерфейсы.</p></article>
+          <article class="glass-card service-card reveal"><span class="service-card__num">05</span><h3 data-i18n="services.s5.title">Cloud & DevOps</h3><p data-i18n="services.s5.desc">AWS, Azure, GCP, Docker, Kubernetes, CI/CD и мониторинг.</p></article>
+          <article class="glass-card service-card reveal"><span class="service-card__num">06</span><h3 data-i18n="services.s6.title">AI / ML solutions</h3><p data-i18n="services.s6.desc">AI-ассистенты, OCR, KYC, голосовой AI и предиктивная аналитика.</p></article>
+          <article class="glass-card service-card reveal"><span class="service-card__num">07</span><h3 data-i18n="services.s7.title">API integrations</h3><p data-i18n="services.s7.desc">Платежи, карты, уведомления, odds API и back-office системы.</p></article>
+          <article class="glass-card service-card reveal"><span class="service-card__num">08</span><h3 data-i18n="services.s8.title">Enterprise systems</h3><p data-i18n="services.s8.desc">Интеграция 1С / ERP, операционные порталы и модернизация UI.</p></article>
+          <article class="glass-card service-card reveal"><span class="service-card__num">09</span><h3 data-i18n="services.s9.title">Custom software</h3><p data-i18n="services.s9.desc">Betting & iGaming, Web3, кибербезопасность и выделенные команды.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="section section--alt" id="portfolio">
+      <div class="container">
+        <header class="section-header section-header--center reveal">
+          <p class="eyebrow" data-i18n="portfolio.eyebrow">Портфолио</p>
+          <h2 data-i18n="portfolio.title">Цифровые продукты для маркетплейсов, логистики и бизнес-систем</h2>
+          <p class="section-desc" data-i18n="portfolio.desc">Enterprise-модернизация, логистические платформы и AI-интеграция в реальных продуктах.</p>
+        </header>
+        <div class="portfolio-grid">
+          <article class="glass-card portfolio-card reveal">
+            <figure class="portfolio-card__media">
+              <img src="assets/images/portfolio/vaniday.jpg" alt="Vaniday marketplace" loading="lazy" width="640" height="400">
+            </figure>
+            <div class="portfolio-card__body">
+              <div class="portfolio-card__head">
+                <span class="case-tag" data-i18n="portfolio.case">КЕЙС</span>
+                <span class="status-badge status-badge--live" data-i18n="portfolio.live">Запущен</span>
+              </div>
+              <h3>Vaniday</h3>
+              <p data-i18n="portfolio.v.desc">Маркетплейс с интеграцией 1С:Предприятие — бронирование, каталоги, промо-механика и loyalty-сценарии.</p>
+              <dl class="portfolio-meta">
+                <div><dt data-i18n="portfolio.industry">Отрасль</dt><dd data-i18n="portfolio.v.industry">Маркетплейс / Beauty & Wellness</dd></div>
+                <div><dt data-i18n="portfolio.tech">Технологии</dt><dd>Web, Mobile, 1С:Enterprise, API</dd></div>
+                <div><dt data-i18n="portfolio.value">Ценность</dt><dd data-i18n="portfolio.v.value">Интеграция с 1С, бронирование, персонализация и коммерческое вовлечение</dd></div>
+              </dl>
+              <a href="https://www.vaniday.com" class="link-arrow" target="_blank" rel="noopener noreferrer" data-i18n="portfolio.open">Открыть сайт</a>
+            </div>
+          </article>
+          <article class="glass-card portfolio-card reveal">
+            <figure class="portfolio-card__media">
+              <img src="assets/images/portfolio/uparcel.jpg" alt="uParcel logistics platform" loading="lazy" width="640" height="400">
+            </figure>
+            <div class="portfolio-card__body">
+              <div class="portfolio-card__head">
+                <span class="case-tag" data-i18n="portfolio.case">КЕЙС</span>
+                <span class="status-badge status-badge--live" data-i18n="portfolio.live">Запущен</span>
+              </div>
+              <h3>uParcel</h3>
+              <p data-i18n="portfolio.u.desc">Web- и мобильная логистическая платформа для доставки, маршрутов и курьерских процессов.</p>
+              <dl class="portfolio-meta">
+                <div><dt data-i18n="portfolio.industry">Отрасль</dt><dd data-i18n="portfolio.u.industry">Логистика / Last-mile delivery</dd></div>
+                <div><dt data-i18n="portfolio.tech">Технологии</dt><dd>Web, Mobile, Maps API, Route optimization</dd></div>
+                <div><dt data-i18n="portfolio.value">Ценность</dt><dd data-i18n="portfolio.u.value">Операционная прозрачность, оптимизация маршрутов и ETA-прогнозирование</dd></div>
+              </dl>
+              <div class="portfolio-links">
+                <a href="https://play.google.com/store/apps/details?id=com.uparcel" class="link-arrow" target="_blank" rel="noopener noreferrer" data-i18n="portfolio.playStore">Google Play</a>
+              </div>
+            </div>
+          </article>
+          <article class="glass-card portfolio-card reveal">
+            <figure class="portfolio-card__media">
+              <img src="assets/images/portfolio/pickupp.jpg" alt="Pickupp delivery ecosystem" loading="lazy" width="640" height="400">
+            </figure>
+            <div class="portfolio-card__body">
+              <div class="portfolio-card__head">
+                <span class="case-tag" data-i18n="portfolio.case">КЕЙС</span>
+                <span class="status-badge status-badge--live" data-i18n="portfolio.live">Запущен</span>
+              </div>
+              <h3>Pickupp</h3>
+              <p data-i18n="portfolio.p.desc">Экосистема доставки с real-time трекингом, wallet-процессами и commerce-сценариями.</p>
+              <dl class="portfolio-meta">
+                <div><dt data-i18n="portfolio.industry">Отрасль</dt><dd data-i18n="portfolio.p.industry">Delivery ecosystem / Commerce</dd></div>
+                <div><dt data-i18n="portfolio.tech">Технологии</dt><dd>Mobile, Web, Real-time tracking, Payments</dd></div>
+                <div><dt data-i18n="portfolio.value">Ценность</dt><dd data-i18n="portfolio.p.value">Self-service портал, трекинг, wallet и автоматизация поддержки</dd></div>
+              </dl>
+              <div class="portfolio-links">
+                <a href="https://play.google.com/store/apps/details?id=com.pickupp.userapp" class="link-arrow" target="_blank" rel="noopener noreferrer" data-i18n="portfolio.playStore">Google Play</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article class="glass-card portfolio-card portfolio-card--wide reveal">
+          <div class="portfolio-card__gallery">
+            <figure class="portfolio-card__gallery-item">
+              <img src="assets/images/portfolio/cilafit_1.jpg" alt="" loading="lazy" width="640" height="400" data-i18n-alt="portfolio.c.alt1">
+            </figure>
+            <figure class="portfolio-card__gallery-item">
+              <img src="assets/images/portfolio/cilafit_2.jpg" alt="" loading="lazy" width="640" height="400" data-i18n-alt="portfolio.c.alt2">
+            </figure>
+            <figure class="portfolio-card__gallery-item">
+              <img src="assets/images/portfolio/cilafit_3.jpg" alt="" loading="lazy" width="640" height="400" data-i18n-alt="portfolio.c.alt3">
+            </figure>
+          </div>
+          <div class="portfolio-card__body portfolio-card__body--wide">
+            <div class="portfolio-card__head">
+              <span class="case-tag" data-i18n="portfolio.case">КЕЙС</span>
+              <span class="status-badge status-badge--dev" data-i18n="portfolio.comingSoon">В разработке</span>
+            </div>
+            <h3>Cila Fit</h3>
+            <p data-i18n="portfolio.c.desc">AI fitness coach with real-time pose detection, automatic rep counting, and live voice coaching during workouts.</p>
+            <dl class="portfolio-meta portfolio-meta--wide">
+              <div><dt data-i18n="portfolio.industry">Отрасль</dt><dd data-i18n="portfolio.c.industry">Health & Fitness / Wellness technology</dd></div>
+              <div><dt data-i18n="portfolio.tech">Технологии</dt><dd data-i18n="portfolio.c.tech">Android (Kotlin, Jetpack Compose), MediaPipe Pose, Text-to-Speech, Supabase, Cloudflare Workers</dd></div>
+              <div><dt data-i18n="portfolio.value">Ценность</dt><dd data-i18n="portfolio.c.value">Hands-free rep counting via camera pose tracking, instant spoken form corrections, and personalized workout guidance without watching the screen</dd></div>
+            </dl>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section" id="process">
+      <div class="container">
+        <header class="section-header section-header--center reveal">
+          <p class="eyebrow" data-i18n="process.eyebrow">Процесс</p>
+          <h2 data-i18n="process.title">Понятный путь от идеи до запуска и масштабирования</h2>
+        </header>
+        <ol class="process-track">
+          <li class="glass-card process-step reveal"><span>01</span><h3 data-i18n="process.s1.title">Discovery</h3><p data-i18n="process.s1.desc">Цели бизнеса, аудитория, требования и риски.</p></li>
+          <li class="glass-card process-step reveal"><span>02</span><h3 data-i18n="process.s2.title">Planning</h3><p data-i18n="process.s2.desc">MVP scope, архитектура, backend, база данных и инфраструктура.</p></li>
+          <li class="glass-card process-step reveal"><span>03</span><h3 data-i18n="process.s3.title">UI/UX design</h3><p data-i18n="process.s3.desc">Пользовательские сценарии, структура продукта и прототипы.</p></li>
+          <li class="glass-card process-step reveal"><span>04</span><h3 data-i18n="process.s4.title">Development</h3><p data-i18n="process.s4.desc">Frontend, mobile, backend, cloud, AI и интеграции.</p></li>
+          <li class="glass-card process-step reveal"><span>05</span><h3 data-i18n="process.s5.title">QA</h3><p data-i18n="process.s5.desc">Тестирование, безопасность, производительность и стабильность.</p></li>
+          <li class="glass-card process-step reveal"><span>06</span><h3 data-i18n="process.s6.title">Deployment</h3><p data-i18n="process.s6.desc">Релиз, мониторинг, оптимизация и контроль качества.</p></li>
+          <li class="glass-card process-step reveal"><span>07</span><h3 data-i18n="process.s7.title">Long-term support</h3><p data-i18n="process.s7.desc">Поддержка, развитие продукта и масштабирование команды.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="section section--alt" id="stack">
+      <div class="container">
+        <header class="section-header section-header--center reveal">
+          <p class="eyebrow" data-i18n="stack.eyebrow">Технологический стек</p>
+          <h2 data-i18n="stack.title">Современные технологии для разработки, облака, AI и Web3</h2>
+        </header>
+        <div class="stack-grid">
+          <div class="glass-card stack-card reveal"><h3 data-i18n="stack.frontend">Frontend</h3><p>React, Next.js, Vue.js, Angular, Svelte, Tailwind</p></div>
+          <div class="glass-card stack-card reveal"><h3 data-i18n="stack.mobile">Mobile</h3><p>Flutter, React Native, Android, iOS</p></div>
+          <div class="glass-card stack-card reveal"><h3 data-i18n="stack.backend">Backend</h3><p>Node.js, Java, Python, Go, Ruby, .NET</p></div>
+          <div class="glass-card stack-card reveal"><h3 data-i18n="stack.db">Databases</h3><p>PostgreSQL, MySQL, MongoDB, Redis, Elasticsearch</p></div>
+          <div class="glass-card stack-card reveal"><h3 data-i18n="stack.cloud">Cloud & DevOps</h3><p>AWS, Azure, GCP, Docker, Kubernetes, CI/CD</p></div>
+          <div class="glass-card stack-card reveal"><h3 data-i18n="stack.ai">AI & Data</h3><p>LLM API, OCR, Speech AI, Predictive Analytics</p></div>
+          <div class="glass-card stack-card reveal"><h3 data-i18n="stack.web3">Blockchain / Web3</h3><p>Solidity, Web3.js, Ethers.js, Wallets, DeFi, NFT</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why -->
+    <section class="section" id="why">
+      <div class="container why-grid">
+        <header class="section-header reveal">
+          <p class="eyebrow" data-i18n="why.eyebrow">Почему Yasha Technology</p>
+          <h2 data-i18n="why.title">Сильная инженерия, прозрачный процесс и ответственность за результат</h2>
+          <p class="section-desc" data-i18n="why.desc">Мы проектируем продукты, которые можно быстро запустить и безопасно масштабировать — с понятной коммуникацией на каждом этапе.</p>
+        </header>
+        <ul class="why-list reveal">
+          <li class="glass-card" data-i18n="why.l1">Надёжная инженерия для реальной production-эксплуатации</li>
+          <li class="glass-card" data-i18n="why.l2">Масштабируемая архитектура с учётом роста и нагрузки</li>
+          <li class="glass-card" data-i18n="why.l3">Прозрачные сроки, этапы, риски и отчётность</li>
+          <li class="glass-card" data-i18n="why.l4">Security-first подход и контроль качества</li>
+          <li class="glass-card" data-i18n="why.l5">Продуктовое мышление и фокус на бизнес-результат</li>
+          <li class="glass-card" data-i18n="why.l6">Долгосрочная поддержка и развитие после запуска</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="contact-shell reveal">
+          <div class="contact-grid">
+            <div>
+              <p class="eyebrow" data-i18n="contact.eyebrow">Контакты</p>
+              <h2 data-i18n="contact.title">Давайте построим ваш продукт вместе</h2>
+              <p class="section-desc" data-i18n="contact.desc">Мы можем оценить вашу идею, предложить техническое решение и лучший подход для запуска и роста.</p>
+              <ul class="contact-perks">
+                <li data-i18n="contact.l1">Бесплатная оценка проекта</li>
+                <li data-i18n="contact.l2">Техническое решение и план MVP</li>
+                <li data-i18n="contact.l3">Архитектурная консультация</li>
+                <li data-i18n="contact.l4">Разработка и поддержка на всех этапах</li>
+              </ul>
+              <div class="contact-actions">
+                <a href="mailto:contact@yasha.tech" class="contact-link" data-i18n-aria="contact.emailAria" aria-label="Email: contact@yasha.tech">
+                  <svg class="contact-link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" aria-hidden="true">
+                    <rect x="3" y="5" width="18" height="14" rx="2"/>
+                    <path d="m3 7 9 6 9-6"/>
+                  </svg>
+                </a>
+                <a href="https://t.me/Wallera225" class="btn btn--telegram" target="_blank" rel="noopener noreferrer" data-i18n-aria="contact.telegramAria" aria-label="Telegram">
+                  <svg class="btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.78 15.02 9.5 19.5c.55 0 .79-.24 1.08-.52l2.59-2.49 5.38 3.95c.99.55 1.7.26 1.96-.9l3.54-16.58h.01c.32-1.48-.54-2.06-1.52-1.7L2.8 9.58c-1.45.57-1.43 1.38-.25 1.75l4.68 1.46 10.86-6.85c.51-.34.98-.15.6.22L9.78 15.02z"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <figure class="contact-visual">
+              <div class="contact-visual__frame glass-card glass-card--shine">
+                <img src="assets/images/contact-support.jpg" alt="" loading="lazy" width="520" height="650" data-i18n-alt="contact.imageAlt">
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a class="logo-wrap logo-wrap--footer" href="#top" aria-label="Yasha Technology">
+          <img src="assets/white_logo.png" alt="Yasha Technology" class="logo logo--footer logo--light" width="148" height="40">
+          <img src="assets/dark_logo.png" alt="Yasha Technology" class="logo logo--footer logo--dark" width="148" height="40">
+        </a>
+        <p data-i18n="footer.tagline">Партнёр по разработке программного обеспечения и цифровых продуктов</p>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copy">&copy; <span id="year"></span> Yasha Technology. <span data-i18n="footer.rights">Все права защищены.</span></p>
+        <a href="mailto:contact@yasha.tech" class="footer__contact">contact@yasha.tech</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://t.me/Wallera225" class="telegram-fab" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M9.78 15.02 9.5 19.5c.55 0 .79-.24 1.08-.52l2.59-2.49 5.38 3.95c.99.55 1.7.26 1.96-.9l3.54-16.58h.01c.32-1.48-.54-2.06-1.52-1.7L2.8 9.58c-1.45.57-1.43 1.38-.25 1.75l4.68 1.46 10.86-6.85c.51-.34.98-.15.6.22L9.78 15.02z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>

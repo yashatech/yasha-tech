@@ -1,0 +1,10 @@
+.DS_Store
+Thumbs.db
+desktop.ini
+
+*.log
+*.tmp
+
+# Editor / local tooling
+.cursor/
+.vscode/
