@@ -20,6 +20,13 @@ yasha-tech/
 ├── index.html          # Page markup
 ├── style.css           # Styles (themes, layout, components)
 ├── script.js           # i18n, theme toggle, interactions
+├── favicon.ico
+├── favicon-16x16.png
+├── favicon-32x32.png
+├── apple-touch-icon.png
+├── android-chrome-192x192.png
+├── android-chrome-512x512.png
+├── site.webmanifest    # PWA / Android home-screen metadata
 ├── README.md
 ├── .gitignore
 ├── .nojekyll           # Required for GitHub Pages
@@ -57,7 +64,7 @@ Create a new repository on GitHub (for example `yasha-tech`).
 ### 2. Push the project
 
 ```bash
-git add index.html style.css script.js README.md .gitignore .nojekyll assets/
+git add index.html style.css script.js README.md .gitignore .nojekyll favicon.ico favicon-*.png apple-touch-icon.png android-chrome-*.png site.webmanifest assets/
 git commit -m "Add Yasha Technology landing page"
 git branch -M main
 git remote add origin https://github.com/YOUR_USERNAME/yasha-tech.git
